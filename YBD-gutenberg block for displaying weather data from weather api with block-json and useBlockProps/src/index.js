@@ -4,14 +4,15 @@ import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps } from "@wordpress/block-editor"
 
 registerBlockType("ourplugin/weather-api-block", {
-  title: "weather report block",
-  icon: "smiley",
-  category: "common",
-  attributes: {
-    skyColor: { type: "string" },
-    grassColor: { type: "string" },
-    selectedCountry: { type: "string" },
-  },
+  /*   title: "weather report block",
+    icon: "smiley",
+    category: "common",
+    attributes: {
+      skyColor: { type: "string" },
+      grassColor: { type: "string" },
+      selectedCountry: { type: "string" },
+    }, */
+  //------all of the above attributes (such as "title", "icon", "attributes") are located inside block.json file so we dont need them here------.
   edit: function (props) {
 
     const blockProps = useBlockProps({

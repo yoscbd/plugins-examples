@@ -2,11 +2,22 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "ourplugin/weather-api-block",
-  "title": "weather report block",
   "editorScript": "file:./build/index.js",
   "editorStyle": "file:./build/index.css",
   "script": "file:./build/frontend.js",
   "style": "file:./build/frontend.css",
+  "title": "weather report block",
   "icon": "smiley",
-  "category": "common"
+  "category": "common",
+  "attributes": {
+    "skyColor": {
+      "type": "string"
+    },
+    "grassColor": {
+      "type": "string"
+    },
+    "selectedCountry": {
+      "type": "string"
+    }
+  }
 }
