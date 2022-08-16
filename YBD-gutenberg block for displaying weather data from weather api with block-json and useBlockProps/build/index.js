@@ -155,6 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // add localozation support
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__.registerBlockType)("ourplugin/weather-api-block", {
   /*   title: "weather report block",
@@ -201,17 +202,22 @@ __webpack_require__.r(__webpack_exports__);
       text: 'London 🍌'
     }, {
       value: 'paris,fr',
-      text: 'Paris 🥝'
-    }]; // listen to "selected" and fire "setSelected" function when detecting changes in "selected" prop :
+      text: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)('Paris 🥝')
+    } //note we are using __() localization function for the text value in paris.
+    ]; // Initioalize the value for our "selected" variable state.
+    // we simply assign an initial value for the "selected" variable so when our app loads and render this will be its value.
 
     const [selected, setSelected] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(country_options[0].value);
 
     const handleChange = event => {
-      setSelected(event.target.value); // fire our on change useState event and passing selected value
+      // " const handleChange = event =>" is the same as: "const handleChange = function(event){}"
+      setSelected(event.target.value); // update our state /variable nammed "selected" with the new selected value
 
       props.setAttributes({
         selectedCountry: event.target.value
       }); // update the selected value for the selectedCountry
+      //see this leture regarding useState:
+      // https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/17039436#overview
     };
 
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", {
@@ -226,12 +232,12 @@ __webpack_require__.r(__webpack_exports__);
       selected: props.attributes.selectedCountry == option.value
     }, option.text)))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("hr", null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
       type: "text",
-      placeholder: "sky color",
-      value: props.attributes.skyColor,
+      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)("Sky Color"),
+      value: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)(props.attributes.skyColor),
       onChange: updateSkyColor
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
       type: "text",
-      placeholder: "grass color",
+      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)("Grass Color"),
       value: props.attributes.grassColor,
       onChange: updateGrassColor
     })));

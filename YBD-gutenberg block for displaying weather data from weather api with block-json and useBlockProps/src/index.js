@@ -3,8 +3,7 @@ import { useState } from 'react';
 import "./index.scss"
 import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps } from "@wordpress/block-editor"
-
-import { __ } from '@wordpress/i18n';
+import { __ } from '@wordpress/i18n'; // add localozation support
 
 
 registerBlockType("ourplugin/weather-api-block", {
@@ -42,17 +41,23 @@ registerBlockType("ourplugin/weather-api-block", {
       { value: 'none', text: '--Choose an option--' },
       { value: 'tel-aviv,il', text: 'Tel Aviv 🍏' },
       { value: 'london,uk', text: 'London 🍌' },
-      { value: 'paris,fr', text: 'Paris 🥝' },
+      { value: 'paris,fr', text: __('Paris 🥝') }, //note we are using __() localization function for the text value in paris.
     ];
 
 
-    // listen to "selected" and fire "setSelected" function when detecting changes in "selected" prop :
+    // Initioalize the value for our "selected" variable state.
+    // we simply assign an initial value for the "selected" variable so when our app loads and render this will be its value.
     const [selected, setSelected] = useState(country_options[0].value);
 
-    const handleChange = event => {
 
-      setSelected(event.target.value); // fire our on change useState event and passing selected value
+    const handleChange = event => {
+      // " const handleChange = event =>" is the same as: "const handleChange = function(event){}"
+
+      setSelected(event.target.value); // update our state /variable nammed "selected" with the new selected value
       props.setAttributes({ selectedCountry: event.target.value }) // update the selected value for the selectedCountry
+
+      //see this leture regarding useState:
+      // https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/17039436#overview
     };
 
     return (
@@ -71,8 +76,11 @@ registerBlockType("ourplugin/weather-api-block", {
         </div>
         <hr />
         <div>
-          <input type="text" placeholder="sky color" value={props.attributes.skyColor} onChange={updateSkyColor} />
-          <input type="text" placeholder="grass color" value={props.attributes.grassColor} onChange={updateGrassColor} />
+          {/* here you can see convertions to tranaslation string using "n18i", see how  we changed the placeholder attribute:
+           <input type="text" placeholder="Sky Color" value={props.attributes.skyColor} onChange={updateSkyColor} />.
+           *note that we have also used it for translating the input value returned by our app by wrapping it with"__()":*/}
+          <input type="text" placeholder={__("Sky Color")} value={__(props.attributes.skyColor)} onChange={updateSkyColor} />
+          <input type="text" placeholder={__("Grass Color")} value={props.attributes.grassColor} onChange={updateGrassColor} />
         </div>
 
       </div >
