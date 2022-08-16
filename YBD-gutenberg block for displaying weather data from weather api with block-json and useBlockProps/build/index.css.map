@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://are-you-paying-attention/./src/index.scss"],"sourcesContent":["body {\r\n    background-color: red;\r\n\r\n}"],"names":[],"sourceRoot":""}
