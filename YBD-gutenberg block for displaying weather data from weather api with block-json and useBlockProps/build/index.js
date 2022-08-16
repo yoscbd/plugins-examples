@@ -52,6 +52,16 @@ module.exports = window["wp"]["blocks"];
 
 module.exports = window["wp"]["element"];
 
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["i18n"];
+
 /***/ })
 
 /******/ 	});
@@ -138,31 +148,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
 
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__.registerBlockType)("ourplugin/weather-api-block", {
-  title: "weather report block",
-  icon: "smiley",
-  category: "common",
-  attributes: {
-    skyColor: {
-      type: "string"
-    },
-    grassColor: {
-      type: "string"
-    },
-    selectedCountry: {
-      type: "string"
-    }
-  },
+  /*   title: "weather report block",
+    icon: "smiley",
+    category: "common",
+    attributes: {
+      skyColor: { type: "string" },
+      grassColor: { type: "string" },
+      selectedCountry: { type: "string" },
+    }, */
+  //------all of the above attributes (such as "title", "icon", "attributes") are located inside block.json file so we dont need them here------.
   edit: function (props) {
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
       className: "weather-block-api",
       style: {
-        backgroundColor: "red"
+        position: "relative"
       }
     });
 
@@ -206,7 +214,11 @@ __webpack_require__.r(__webpack_exports__);
       }); // update the selected value for the selectedCountry
     };
 
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("select", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", {
+      style: {
+        textAlign: "center"
+      }
+    }, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__)("selected country here:")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("select", {
       onChange: handleChange
     }, country_options.map(option => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
       key: option.value,

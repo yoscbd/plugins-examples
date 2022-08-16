@@ -1,7 +1,11 @@
+
 import { useState } from 'react';
 import "./index.scss"
 import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps } from "@wordpress/block-editor"
+
+import { __ } from '@wordpress/i18n';
+
 
 registerBlockType("ourplugin/weather-api-block", {
   /*   title: "weather report block",
@@ -17,7 +21,7 @@ registerBlockType("ourplugin/weather-api-block", {
 
     const blockProps = useBlockProps({
       className: "weather-block-api",
-      style: { backgroundColor: "red" }
+      style: { position: "relative" }
     })
 
 
@@ -56,6 +60,7 @@ registerBlockType("ourplugin/weather-api-block", {
         {/* // we will ,map all select options for countries array  */}
         {/* selected={props.attributes.selectedCountry == option.value} if return true, the option will be selected  */}
         <div>
+          <h5 style={{ textAlign: "center" }}> {__("selected country here:")}</h5>
           <select onChange={handleChange}>
             {country_options.map(option => (
               <option key={option.value} value={option.value} selected={props.attributes.selectedCountry == option.value}>
