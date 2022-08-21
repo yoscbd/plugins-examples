@@ -58,16 +58,18 @@ echo esc_html($attributes['skyColor']) ?> and the grass is <?php echo esc_html($
         echo ybd_get_weather(esc_html($attributes['selectedCountry']));
 //echo do_shortcode('[weather location="' . esc_html($attributes['selectedCountry']) . '"]');
          ?>
+
+    <p class="cta">
+        <select name="cities" id="cities">
+            <option value="tel-aviv,il">Tel-Aviv</option>
+            <option value="london,uk">London</option>
+            <option value="paris,fr">Paris</option>
+        </select>
+        <button id="weather-cta">Update Forcast</button>
+    </p>
 </div>
 
-<p class="cta">
-    <select name="cities" id="cities">
-        <option value="tel-aviv,il">Tel-Aviv</option>
-        <option value="london,uk">London</option>
-        <option value="paris,fr">Paris</option>
-    </select>
-    <button id="weather-cta">Update Forcast</button>
-</p>
+
 <script>
 // this content was moved to the wheater api block plugin index.php main file
 </script>

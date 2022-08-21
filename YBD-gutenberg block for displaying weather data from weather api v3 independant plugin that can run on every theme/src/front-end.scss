@@ -1,0 +1,22 @@
+.weather-block-api {
+    background-color: #dadaff !important;
+
+    .cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        select {
+            margin: 1rem;
+        }
+
+        button {
+
+            background: #546a97;
+            color: #fff;
+            letter-spacing: 0.1rem;
+
+        }
+    }
+}

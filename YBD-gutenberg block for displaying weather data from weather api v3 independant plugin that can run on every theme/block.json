@@ -5,7 +5,7 @@
   "editorScript": "file:./build/index.js",
   "editorStyle": "file:./build/index.css",
   "script": "file:./build/frontend.js",
-  "style": "file:./build/frontend.css",
+  "style": "file:./styles/front-end.css",
   "title": "weather report block",
   "icon": "smiley",
   "category": "common",

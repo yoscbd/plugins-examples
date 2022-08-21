@@ -34,8 +34,10 @@ function weather_handler_service()
         $icon_url = 'http://openweathermap.org/img/wn/' . $forecast_icon . '@2x.png';
         $icon_img = '<img src="' . $icon_url . '" loading="lazy">';
 
-        $obj_to_return = '<div class="weather"><div class="forcast">' . $forecast_str . '</div>';
-        $obj_to_return .= '<div class="icon">' . $icon_img . '</div></div>';
+        $obj_to_return = "";
+
+        $obj_to_return = '<div><div class="weather"><div class="icon">' . $icon_img . '</div><div class="forcast">' . $forecast_str . '</div></div>';
+
         echo $obj_to_return;
         wp_die();
     } else {

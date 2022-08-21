@@ -4,9 +4,11 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "build": "wp-scripts build ",
+    "build": "wp-scripts build  && sass src/front-end.scss styles/front-end.css",
     "start": "wp-scripts start src/front.js src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": " sass src/front-end.scss build/front-end.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/front-end.scss styles/front-end.css"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
   },
   "dependencies": {
     "@wordpress/i18n": "^4.15.0",
-    "@wordpress/react-i18n": "^3.13.0"
+    "@wordpress/react-i18n": "^3.13.0",
+    "node-scss": "^7.0.3"
   }
 }

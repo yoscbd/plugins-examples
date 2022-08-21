@@ -20,10 +20,11 @@
             data: ourRequestData,
             success: response => {
                 console.log(response);
-                $(".weather").hide('slow');
-                $(".weather").html('');
-                $(".weather").html(response);
-                $(".weather").show('slow');
+                $(".weather").hide('slow', function () {
+                    $(".weather").html('');
+                    $(".weather").show('slow');
+                    $(".weather").html(response);
+                });
 
             },
             error: response => {

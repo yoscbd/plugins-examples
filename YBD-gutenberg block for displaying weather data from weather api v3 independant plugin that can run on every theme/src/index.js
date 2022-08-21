@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import "./index.scss"
+
 import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps } from "@wordpress/block-editor"
 import { __ } from '@wordpress/i18n'; // add localozation support
