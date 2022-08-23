@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/banner-block",
+  "version": "0.1.0",
+  "title": "Banner Block",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example static block scaffolded with Create Block tool.",
+  "supports": {
+    "html": true
+  },
+  "textdomain": "banner-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "main_title": {
+      "type": "string",
+      "default": "Gain Visibility to Immediate Threats as They Emerge"
+    },
+    "sub_title_first": {
+      "type": "string",
+      "default": "Our way to help keep organizations"
+    },
+    "sub_title_second": {
+      "type": "string",
+      "default": "aware and protected."
+    },
+    "cta_text": {
+      "type": "string",
+      "default": "Free Trial"
+    },
+    "cta_url": {
+      "type": "string",
+      "default": "/"
+    },
+    "imgID": {
+      "type": "number",
+      "default": "52"
+    },
+    "imgURL": {
+      "type": "string",
+      "default": "http://127.0.0.1/cymulate/wp-content/uploads/2022/07/hero.jpg"
+    },
+    "MobileImgID": {
+      "type": "number",
+      "default": "55"
+    },
+    "MobileImgURL": {
+      "type": "string",
+      "default": "http://127.0.0.1/cymulate/wp-content/uploads/2022/07/Union.png"
+    },
+    "text_color": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "cta_color": {
+      "type": "string",
+      "default": "#000"
+    }
+  }
+}
