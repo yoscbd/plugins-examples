@@ -1,7 +1,7 @@
 {
-	"name": "banner-block",
+	"name": "custom-banner",
 	"version": "0.1.0",
-	"description": "Example static block scaffolded with Create Block tool.",
+	"description": "Example block scaffolded with Create Block tool.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
@@ -15,11 +15,8 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^23.7.2"
-	},
-	"dependencies": {
-		"@wordpress/icons": "^9.6.0",
-		"node-sass": "^7.0.1",
-		"react-color": "^2.19.3"
+		"@wordpress/scripts": "*",
+		"@wordpress/i18n": "*",
+		"@wordpress/icons": "*"
 	}
 }
