@@ -1,0 +1,119 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/offers-block/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.section-second {
+  background-color: #E8E9E5;
+  padding-left: 106px;
+  padding-right: 106px;
+  padding-top: 122px;
+  padding-bottom: 122px;
+}
+@media (max-width: 1439.98px) {
+  .section-second {
+    height: auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-second {
+    padding: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-second {
+    padding: 1.5rem;
+  }
+}
+.section-second .item {
+  width: 380px;
+  margin: 0 auto;
+  /*
+        @media screen and (max-width: 880px) {
+            width: 220px;
+        }
+
+        @media screen and (max-width: 720px) {
+            width: 100%;
+        } */
+}
+@media screen and (max-width: 1439.98px) {
+  .section-second .item {
+    width: 90%;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-second .item {
+    width: 100%;
+  }
+}
+.section-second .item h4 {
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: #2A7DE1;
+}
+@media (max-width: 575.98px) {
+  .section-second .item h4 {
+    font-size: 18px;
+  }
+}
+.section-second .item p {
+  font-size: 0.96rem;
+  line-height: 30px;
+  color: #212721;
+  font-family: GTAmerica;
+}
+.section-second .item1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: myArea1;
+}
+.section-second .item1 h3 {
+  font-size: 32px;
+  line-height: 50px;
+  font-family: RecifeText;
+  color: #212721;
+}
+@media (max-width: 575.98px) {
+  .section-second .item1 h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+.section-second .item4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: myArea4;
+}
+.section-second .grid-container {
+  display: grid;
+  grid-template-areas: "myArea1 myArea2 myArea3" ".. myArea4 ..";
+  /*  @media screen and (max-width: 720px) {
+            display: inline-block;
+        } */
+}
+@media screen and (max-width: 1439.98px) {
+  .section-second .grid-container {
+    grid-template-areas: "myArea1 myArea2 " "myArea4 myArea3";
+  }
+  .section-second .item1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .section-second .item4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-second .grid-container {
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

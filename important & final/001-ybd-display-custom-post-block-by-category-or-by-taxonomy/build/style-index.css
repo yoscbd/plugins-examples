@@ -1,0 +1,33 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ybd-functions-ybd-display-custom-post-block {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.wp-block-ybd-functions-ybd-display-custom-post-block li.columns-1 {
+  width: 100%;
+}
+.wp-block-ybd-functions-ybd-display-custom-post-block li.columns-2 {
+  width: 48%;
+}
+.wp-block-ybd-functions-ybd-display-custom-post-block li.columns-3 {
+  width: 32%;
+}
+.wp-block-ybd-functions-ybd-display-custom-post-block li.columns-4 {
+  width: 22%;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

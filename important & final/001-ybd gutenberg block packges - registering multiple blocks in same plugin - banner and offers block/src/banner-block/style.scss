@@ -1,0 +1,270 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+//*****colors*****:
+$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: $purple; // Once we've changed the value, we'll also make it the primary brand color.
+$brand-brown: #998352; // Once we've changed the value, we'll also make it the primary brand color.
+$brand-light-brown: rgba(211, 133, 76, 1);
+$auto_brand-light-brown: lighten($brand-brown, 70%);
+$brand-white: #fff;
+$brand-blue: #2A7DE1;
+$brand-black: #212721;
+$navigation__background-color: #FDFDFC;
+$navigation__font-color: rgba(33, 39, 33, 1);
+$navbar-dark-brand-color: $navigation__font-color ;
+$navbar-dark-color: $navigation__font-color;
+$first-section__background-color: #212721;
+$first-section__titles-color: rgba(153, 131, 82, 1);
+$cta__background-color: #D3854C;
+$light-brown-border: #CCC1A8;
+$brand-gray: #E8E9E5;
+
+$brand-gray-gradient: linear-gradient(180deg, #CFD7F1 0%, rgba(207, 215, 241, 0) 151.2%);
+
+
+//*****mixins*****:
+
+@mixin no_padding__all() {
+	padding: 0;
+}
+
+@mixin no_padding__sides() {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@mixin no_padding__top-bottom() {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+@mixin flex_horizontal_center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin all_sections_padding_media_queries() {
+	@media (max-width: 1439.98px) {
+		height: auto;
+	}
+
+	@media (max-width: 991.98px) {
+		padding: 3rem;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 1.5rem;
+	}
+}
+
+@mixin all_sections_padding() {
+	padding-left: 106px;
+	padding-right: 106px;
+	padding-top: 122px;
+	padding-bottom: 122px;
+
+}
+
+
+
+
+
+//*****layouts*****:
+$container-max-widths: (
+	sm: 100%,
+	md: 100%,
+	lg: 100%,
+	xl: 100%,
+	xxl: 1440px // default value: 1320px
+);
+
+
+//*****custom Fonts*****:
+$font-path: "../fonts";
+$font-family-sans-serif: GTAmerica, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: RecifeText;
+
+.section-first {
+	height: 694px;
+	background-color: $first-section__background-color;
+	padding: 96px 106px 88px 106px;
+
+	// X-Large devices (large desktops, less than 1440px)
+	@include all_sections_padding_media_queries();
+
+	.banner-title {
+		h4 {
+			font-size: 1.38rem;
+			color: $first-section__titles-color;
+			margin-bottom: 2.56rem;
+			// margin-bottom: 41px;
+			font-family: GTAmerica;
+			letter-spacing: 1px;
+		}
+	}
+
+	.banner-main-section {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		// Medium devices (tablets, less than 992px)
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 2rem;
+		}
+
+		.left {
+
+
+
+			@media (max-width: 1439.98px) {
+				width: 59%;
+
+			}
+
+			// Medium devices (tablets, less than 992px)
+			@media (max-width: 991.98px) {
+				width: 100%;
+			}
+
+			h3 {
+				color: $brand-white;
+				font-size: 1.96rem;
+				width: 664px;
+				line-height: 3.14rem;
+				font-family: RecifeText;
+
+				// X-Large devices (large desktops, less than 1440px)
+				@media (max-width: 1439.98px) {
+					width: 100%;
+					font-size: 1.8rem;
+					line-height: 3rem;
+
+				}
+
+				// Medium devices (tablets, less than 992px)
+				@media (max-width: 991.98px) {
+					width: 100%;
+				}
+
+				@media (max-width: 575.98px) {
+					font-size: 1.5rem;
+					line-height: 2.5rem;
+				}
+
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 33px;
+				width: 592px;
+				color: $brand-white;
+				margin-bottom: 50px;
+
+				@media (max-width: 1439.98px) {
+					width: 100%;
+				}
+
+				@media (max-width: 991.98px) {
+					width: 100%;
+				}
+			}
+		}
+
+		.right {
+
+			@media (max-width: 1439.98px) {
+				width: 39%;
+
+			}
+
+			@media (max-width: 991.98px) {
+				width: 100%;
+
+			}
+
+			img {
+				padding-top: 0.6rem;
+				max-width: 530px;
+
+				@media (max-width: 1439.98px) {
+					max-width: 100%;
+				}
+
+				@media (max-width: 991.98px) {
+					width: 90%;
+
+				}
+
+				@media (max-width: 767.98px) {
+					width: 100%;
+				}
+
+
+
+				/*   @media screen and (max-width: 1440px) {
+                  padding-top: 0;
+              } */
+
+			}
+		}
+	}
+
+	.banner-cta {
+		button {
+
+			width: 312px;
+			height: 71px;
+			background-color: $cta__background-color;
+			font-size: 1rem;
+			color: $brand-white;
+			border: none;
+
+			@media screen and (max-width: 1439.98px) {
+				font-size: 110%;
+			}
+
+			@media (max-width: 575.98px) {
+				width: 100%;
+			}
+
+			/*    @media screen and (max-width: 1440px) {
+              width: 20rem;
+              height: 4rem;
+          } */
+		}
+	}
+}
+
+
+.banner-main-title-color-brown {
+	color: rgb(231, 158, 0) !important;
+}
+
+.banner-main-title-color-white {
+	color: rgb(250, 241, 218) !important;
+}
+
+.banner-main-title-color-blue {
+	color: rgb(111, 0, 255) !important;
+}

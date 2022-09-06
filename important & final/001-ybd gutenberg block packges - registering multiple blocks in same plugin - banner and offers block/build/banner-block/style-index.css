@@ -1,0 +1,175 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/banner-block/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.section-first {
+  height: 694px;
+  background-color: #212721;
+  padding: 96px 106px 88px 106px;
+}
+@media (max-width: 1439.98px) {
+  .section-first {
+    height: auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-first {
+    padding: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-first {
+    padding: 1.5rem;
+  }
+}
+.section-first .banner-title h4 {
+  font-size: 1.38rem;
+  color: rgb(153, 131, 82);
+  margin-bottom: 2.56rem;
+  font-family: GTAmerica;
+  letter-spacing: 1px;
+}
+.section-first .banner-main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 991.98px) {
+  .section-first .banner-main-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1439.98px) {
+  .section-first .banner-main-section .left {
+    width: 59%;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-first .banner-main-section .left {
+    width: 100%;
+  }
+}
+.section-first .banner-main-section .left h3 {
+  color: #fff;
+  font-size: 1.96rem;
+  width: 664px;
+  line-height: 3.14rem;
+  font-family: RecifeText;
+}
+@media (max-width: 1439.98px) {
+  .section-first .banner-main-section .left h3 {
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-first .banner-main-section .left h3 {
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-first .banner-main-section .left h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+.section-first .banner-main-section .left p {
+  font-size: 18px;
+  line-height: 33px;
+  width: 592px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+@media (max-width: 1439.98px) {
+  .section-first .banner-main-section .left p {
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-first .banner-main-section .left p {
+    width: 100%;
+  }
+}
+@media (max-width: 1439.98px) {
+  .section-first .banner-main-section .right {
+    width: 39%;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-first .banner-main-section .right {
+    width: 100%;
+  }
+}
+.section-first .banner-main-section .right img {
+  padding-top: 0.6rem;
+  max-width: 530px;
+  /*   @media screen and (max-width: 1440px) {
+                padding-top: 0;
+            } */
+}
+@media (max-width: 1439.98px) {
+  .section-first .banner-main-section .right img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-first .banner-main-section .right img {
+    width: 90%;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-first .banner-main-section .right img {
+    width: 100%;
+  }
+}
+.section-first .banner-cta button {
+  width: 312px;
+  height: 71px;
+  background-color: #D3854C;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  /*    @media screen and (max-width: 1440px) {
+             width: 20rem;
+             height: 4rem;
+         } */
+}
+@media screen and (max-width: 1439.98px) {
+  .section-first .banner-cta button {
+    font-size: 110%;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-first .banner-cta button {
+    width: 100%;
+  }
+}
+
+.banner-main-title-color-brown {
+  color: rgb(231, 158, 0) !important;
+}
+
+.banner-main-title-color-white {
+  color: rgb(250, 241, 218) !important;
+}
+
+.banner-main-title-color-blue {
+  color: rgb(111, 0, 255) !important;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

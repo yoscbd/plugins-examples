@@ -1,0 +1,37 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-ybd-functions-ybd-display-custom-post-block {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	list-style-type: none;
+
+	li.columns-1 {
+		width: 100%
+	}
+
+	li.columns-2 {
+		width: 48%;
+
+	}
+
+	li.columns-3 {
+		width: 32%;
+
+	}
+
+	li.columns-4 {
+		width: 22%;
+
+	}
+
+}

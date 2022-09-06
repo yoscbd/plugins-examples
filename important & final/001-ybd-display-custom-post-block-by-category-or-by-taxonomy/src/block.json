@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ybd-functions/ybd-display-custom-post-block",
+	"version": "0.1.0",
+	"title": "Ybd Display Custom Post Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Display and filter latest custom and core posts.",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"color": {
+			"link": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "ybd-display-custom-post-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"keywords": [
+		"latest",
+		"posts",
+		"ybd"
+	],
+	"attributes": {
+		"numberOfPosts": {
+			"type": "number",
+			"default": 5
+		},
+		"numberOfColumns": {
+			"type": "number",
+			"default": 4
+		},
+		"Prioritizing": {
+			"type": "number",
+			"default": 4
+		},
+		"displayFeaturedImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"toggleTreats": {
+			"type": "boolean",
+			"default": true
+		},
+		"order": {
+			"type": "string",
+			"default": "desc"
+		},
+		"orderBy": {
+			"type": "string",
+			"default": "date"
+		},
+		"categories": {
+			"type": "array",
+			"items": {
+				"type": "object"
+			}
+		}
+	}
+}

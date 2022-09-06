@@ -1,0 +1,191 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+//*****colors*****:
+$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: $purple; // Once we've changed the value, we'll also make it the primary brand color.
+$brand-brown: #998352; // Once we've changed the value, we'll also make it the primary brand color.
+$brand-light-brown: rgba(211, 133, 76, 1);
+$auto_brand-light-brown: lighten($brand-brown, 70%);
+$brand-white: #fff;
+$brand-blue: #2A7DE1;
+$brand-black: #212721;
+$navigation__background-color: #FDFDFC;
+$navigation__font-color: rgba(33, 39, 33, 1);
+$navbar-dark-brand-color: $navigation__font-color ;
+$navbar-dark-color: $navigation__font-color;
+$first-section__background-color: #212721;
+$first-section__titles-color: rgba(153, 131, 82, 1);
+$cta__background-color: #D3854C;
+$light-brown-border: #CCC1A8;
+$brand-gray: #E8E9E5;
+
+$brand-gray-gradient: linear-gradient(180deg, #CFD7F1 0%, rgba(207, 215, 241, 0) 151.2%);
+
+
+//*****mixins*****:
+
+@mixin no_padding__all() {
+	padding: 0;
+}
+
+@mixin no_padding__sides() {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@mixin no_padding__top-bottom() {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+@mixin flex_horizontal_center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin all_sections_padding_media_queries() {
+	@media (max-width: 1439.98px) {
+		height: auto;
+	}
+
+	@media (max-width: 991.98px) {
+		padding: 3rem;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 1.5rem;
+	}
+}
+
+@mixin all_sections_padding() {
+	padding-left: 106px;
+	padding-right: 106px;
+	padding-top: 122px;
+	padding-bottom: 122px;
+
+}
+
+
+
+
+
+//*****layouts*****:
+$container-max-widths: (
+	sm: 100%,
+	md: 100%,
+	lg: 100%,
+	xl: 100%,
+	xxl: 1440px // default value: 1320px
+);
+
+
+//*****custom Fonts*****:
+$font-path: "../fonts";
+$font-family-sans-serif: GTAmerica, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: RecifeText;
+
+.section-second {
+	//height: 695px;
+	background-color: $brand-gray;
+
+	@include all_sections_padding();
+	@include all_sections_padding_media_queries();
+
+
+	.item {
+		width: 380px;
+		margin: 0 auto;
+
+		@media screen and (max-width: 1439.98px) {
+			width: 90%;
+		}
+
+		@media (max-width: 767.98px) {
+			width: 100%;
+		}
+
+		/*
+        @media screen and (max-width: 880px) {
+            width: 220px;
+        }
+
+        @media screen and (max-width: 720px) {
+            width: 100%;
+        } */
+
+		h4 {
+			font-size: 20px;
+			line-height: 36px;
+			letter-spacing: 1px;
+			color: $brand-blue;
+
+			@media (max-width: 575.98px) {
+				font-size: 18px;
+
+			}
+		}
+
+		p {
+			font-size: 0.96rem;
+			line-height: 30px;
+			color: $brand-black;
+			font-family: GTAmerica;
+			// width: 380px;
+
+		}
+	}
+
+	.item1 {
+		grid-area: myArea1;
+
+		h3 {
+			font-size: 32px;
+			line-height: 50px;
+			font-family: RecifeText;
+			color: $brand-black;
+
+			@media (max-width: 575.98px) {
+				font-size: 1.5rem;
+				line-height: 2.5rem;
+			}
+
+		}
+	}
+
+	.item4 {
+		grid-area: myArea4;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-areas: 'myArea1 myArea2 myArea3'
+			'.. myArea4 ..';
+
+		@media screen and (max-width: 1439.98px) {
+			grid-template-areas: 'myArea1 myArea2 '
+				'myArea4 myArea3';
+
+		}
+
+		@media (max-width: 767.98px) {
+			display: inline-block;
+		}
+
+		/*  @media screen and (max-width: 720px) {
+            display: inline-block;
+        } */
+
+
+
+		// gap: 44px;
+		//background-color: #2196F3;
+		//padding: 10px;
+	}
+
+
+}

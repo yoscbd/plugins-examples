@@ -1,0 +1,29 @@
+{
+	"name": "ybd-display-custom-post-block",
+	"version": "0.1.0",
+	"description": "Example block scaffolded with Create Block tool.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^9.3.0",
+		"@wordpress/prettier-config": "^1.1.1",
+		"@wordpress/scripts": "^24.0.0",
+		"@wordpress/stylelint-config": "^19.1.0",
+		"eslint-config-prettier": "^8.3.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.3"
+	},
+	"dependencies": {
+		"react-select": "^5.4.0"
+	}
+}

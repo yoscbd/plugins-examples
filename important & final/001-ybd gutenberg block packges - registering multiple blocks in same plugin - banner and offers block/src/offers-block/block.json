@@ -1,0 +1,68 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/offers-block",
+	"version": "0.1.0",
+	"title": "Offers Blocks",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ybd-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"keywords": [
+		"offers",
+		"ybd"
+	],
+	"attributes": {
+		"main_text": {
+			"type": "string",
+			"default": "IFRS 16 Compliance: Challenges Ahead"
+		},
+		"item_1_title": {
+			"type": "string",
+			"default": "New lease accounting standard"
+		},
+		"item_2_title": {
+			"type": "string",
+			"default": "Relooking at your reports"
+		},
+		"item_3_title": {
+			"type": "string",
+			"default": "Manual work increases the risk"
+		},
+		"item_1_text": {
+			"type": "string",
+			"default": "IFRS 16, the new lease accounting standard, brings sweeping changes to how we account for leases, and affects every company and industry. Ensuring compliance is a challenge that grows with each additional lease you have in place."
+		},
+		"item_2_text": {
+			"type": "string",
+			"default": "From office and other real estate leases to employee vehicles, equipment and even contracts you were unaware had a lease element within them – IFRS 16 means completely relooking at howyour organization calculates, accounts for and reports on leases. This now includesrecognizing lease assets and liabilities on the balance sheet."
+		},
+		"item_3_text": {
+			"type": "string",
+			"default": "Manually dealing with leases has not only become inefficient, it also exponentially increases the risk of error and non-compliance, not to mention using up the precious time of you and your team."
+		},
+		"sub_title_first": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "class33",
+			"default": "pppppppppppppppp"
+		}
+	},
+	"example": {
+		"attributes": {
+			"main_text": "IFRS 16 Compliance: Challenges Ahead",
+			"item_1_title": "New lease accounting standard",
+			"item_2_title": "Relooking at your reports",
+			"item_3_title": "Manual work increases the risk",
+			"item_1_text": "IFRS 16, the new lease accounting standard, brings sweeping changes to how we account for leases, and affects every company and industry. Ensuring compliance is a challenge that grows with each additional lease you have in place.",
+			"item_2_text": "From office and other real estate leases to employee vehicles, equipment and even contracts you were unaware had a lease element within them – IFRS 16 means completely relooking at howyour organization calculates, accounts for and reports on leases. This now includesrecognizing lease assets and liabilities on the balance sheet.",
+			"item_3_text": "Manually dealing with leases has not only become inefficient, it also exponentially increases the risk of error and non-compliance, not to mention using up the precious time of you and your team."
+		}
+	}
+}
