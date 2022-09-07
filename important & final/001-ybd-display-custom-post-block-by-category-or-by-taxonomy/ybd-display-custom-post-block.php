@@ -68,13 +68,3 @@ function ybd_content_render_latest_posts_block($attributes)
     return $posts;
 }
 
-add_filter('register_taxonomy_args', 'ybd_register_taxonomy_in_rest', 10, 2);
-
-function ybd_register_taxonomy_in_rest($args, $taxonomy)
-{
-    if (in_array($taxonomy, array('Prioritize'))) {
-        $args['show_in_rest'] = true;
-    }
-
-    return $args;
-}
