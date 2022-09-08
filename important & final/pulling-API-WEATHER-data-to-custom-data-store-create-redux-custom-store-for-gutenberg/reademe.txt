@@ -1,0 +1,7 @@
+Example api calls:
+
+Get all api data:
+wp.data.select('blocks-course/todos').getTodos()
+
+Update api data:
+wp.data.dispatch('blocks-course/todos').updateTodo({'title': 'my new title2', 'completed': true},0)
