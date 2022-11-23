@@ -1,10 +1,11 @@
 <?php
 /**
  * Plugin Name: YBD ajax search
- * Description: preform ajax search using wp-ajax and shortcode
+ * Description: preform ajax search using wp-ajax using wp_head function.
  * Text Domain: ybd-ajax-search
  * Author:      YBD
- * version: 1.0
+ *version: 1.1
+ *
  */
 
 // Standard plugin security, keep this line in place.
@@ -12,9 +13,18 @@ defined('ABSPATH') or die();
 
 $ybd_search_dir = plugin_dir_path(__DIR__);
 
-// 1.add the search form html to the header:
+// 1.add the search form html as a shortcode:
+
+function ajax_search_shortcode()
+{
+    return ajax_search_html();
+}
+add_shortcode('ajaxsearch', 'ajax_search_shortcode');
+
+//1.1.service function: create html for the search form:
 function ajax_search_html()
 {
+    ob_start();
     ?>
 <h4>
     <n><?php esc_html_e('Search in articles:', 'ybd-ajax-search')?></n>
@@ -26,9 +36,8 @@ function ajax_search_html()
 <div id="txtHint"></div>
 </p>
 <?php
-
+return ob_get_clean();
 }
-add_action('wp_head', 'ajax_search_html');
 
 // 2.add the js script:
 
