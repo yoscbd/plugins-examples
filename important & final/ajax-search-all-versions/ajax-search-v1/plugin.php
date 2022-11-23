@@ -89,11 +89,21 @@ function get_articles_titles()
         wp_reset_postdata();
 
         if ($number_of_results < 1) {
-            echo "<div>Sorry, no matching posts for this search query, please try again....</div>";
-        } else {
-            echo "<div id='results'> number of results: " . $number_of_results . "</div>";
+            ?>
+<div>
+    <?php esc_html_e('Sorry, no matching posts for this search query, please try again....', 'ybd-ajax-search')?>
+</div>
+<?php
+} else {
+            ?>
 
-        }
+<div id="results"> <?php
+esc_html_e('number of results: ', 'ybd-ajax-search');
+            echo $number_of_results
+            ?>
+</div>
+<?php
+}
     }
 
     wp_die();
